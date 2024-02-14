@@ -79,6 +79,7 @@
                 <!-- life and score -->
                 <div class="flex justify-between  w-3/4">
                     <button class="btn text-white bg-purple-500 rounded-full">
+                        life
                         <svg width="22.750000" height="20.999451" viewBox="0 0 22.75 20.9995" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
@@ -90,9 +91,10 @@
                                 fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                         </svg>
 
-                        Button
+                        <span id="current-life">5</span>
                     </button>
                     <button class="btn text-white p bg-purple-500 rounded-full">
+                        Score
                         <svg width="21.169922" height="21.170013" viewBox="0 0 21.1699 21.17" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
@@ -104,8 +106,7 @@
                                 fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                         </svg>
 
-
-                        Score
+                        <span id="current-score">0</span>
                     </button>
                 </div>
             </div>
@@ -114,12 +115,13 @@
 
         <!-- final score start -->
 
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class=" flex justify-center items-center min-h-screen hidden">
             <div class="text-white p-4 rounded-xl bg-[#ffffff33] flex flex-col items-center justify-center space-y-8">
+                <h4>Game Over !</h4>
                 <h1 class="text-8xl font-bold text-white"><span>
                         Score:
-                    </span><span>14</span></h1>
-                <button class="btn ring-1 ring-gray-800 bg-slate-400 ">Play Again</button>
+                    </span><span id="last-score">14</span></h1>
+                <button onclick="play()" class="btn ring-1 ring-gray-800 bg-slate-400 ">Play Again</button>
                 <p>Practice will make you Pro</p>
             </div>
         </section>
