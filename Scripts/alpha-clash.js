@@ -8,17 +8,17 @@
 // }
 
 function handleKeyBoardUpEvent(e) {
-    const playerPressed = e.key;
+    const playerPressedKey = e.key;
+    
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
-    const expectedAlphabet = currentAlphabet.toLowerCase()
-    // console.log(expectedAlphabet, playerPressed);
-
-    if (playerPressed === expectedAlphabet) {
-        console.log('You got a point');
-    }
-    else {
-        console.log('You lost a life');
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    if (playerPressedKey === expectedAlphabet) {
+        console.log('you got point');
+        removeBackgroundColorById(expectedAlphabet)
+        continueGame();
+    } else {
+        console.log('you are wrong');
     }
 }
 
